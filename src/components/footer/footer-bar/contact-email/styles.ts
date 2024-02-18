@@ -13,7 +13,7 @@ export const SubscribeInputWrapper = styled.div`
     margin-bottom: 48px;
     gap: 24px;
     width: 600px;
-`
+`;
 
 export const SubscribeInput = styled.input`
     height: 60px;
@@ -21,4 +21,4 @@ export const SubscribeInput = styled.input`
     width: 100%;
     padding: 16px 24px;
     border-radius: 5px;
-`
+`;

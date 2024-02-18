@@ -1,5 +1,5 @@
-import { ButtonComponent } from "@/components/button/styles";
-import { cormorant } from "@/constants";
+import { ButtonComponent } from '@/components/button/styles';
+import { cormorant } from '@/constants';
 
 type Props = {
     type?: 'submit' | 'reset' | 'button' | undefined;

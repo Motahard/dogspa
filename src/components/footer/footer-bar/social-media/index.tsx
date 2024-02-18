@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { SocialLink, cormorant } from '@/constants';
-import { SocialMediaContainer, SocialMediaTitle, SocialList, SocialListItem } from '@/components/footer/footer-bar/social-media/styles';
+import {
+  SocialMediaContainer, SocialMediaTitle, SocialList, SocialListItem,
+} from '@/components/footer/footer-bar/social-media/styles';
 
 type Props = {
     socialLinks: SocialLink[]

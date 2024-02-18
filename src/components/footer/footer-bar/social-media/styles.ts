@@ -21,4 +21,4 @@ export const SocialListItem = styled.li`
     &:first-child {
         padding-left: 24px;
     }
-`
+`;
