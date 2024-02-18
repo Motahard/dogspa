@@ -1,8 +1,8 @@
-import FooterBar from "@/components/footer/footer-bar";
-import { bottomFooterBarInfo } from "@/constants";
-import styled from "styled-components";
+import styled from 'styled-components';
+import FooterBar from '@/components/footer/footer-bar';
+import { bottomFooterBarInfo } from '@/constants';
 
-const ListItem = styled.p``
+const ListItem = styled.p``;
 
 const Container = styled.div`
     margin-top: 1rem;
@@ -12,19 +12,19 @@ const Container = styled.div`
         border: 2px solid orange;
         margin-bottom: 1px;
     }
-`
+`;
 
-const Footer = () => {
-    return (
-        <footer>
-            <FooterBar />
-            <Container>
-                {bottomFooterBarInfo.map(item => (
-                    <ListItem key={item.id}>{item.text}</ListItem>
-                ))}
-            </Container>
-        </footer>
-    )
+function Footer() {
+  return (
+    <footer>
+      <FooterBar />
+      <Container>
+        {bottomFooterBarInfo.map((item) => (
+          <ListItem key={item.id}>{item.text}</ListItem>
+        ))}
+      </Container>
+    </footer>
+  );
 }
 
 export default Footer;

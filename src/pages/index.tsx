@@ -1,14 +1,14 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-const HomePage = () => {
+function HomePage() {
   return (
     <div>
       <nav>
-        <Link href='about'>About</Link>
+        <Link href="about">About</Link>
       </nav>
       Home Page
     </div>
-  )
+  );
 }
 
 export default HomePage;
