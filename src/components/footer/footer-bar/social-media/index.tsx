@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { SocialLink } from '@/constants';
+import { SocialLink, cormorant } from '@/constants';
+import { SocialMediaContainer, SocialMediaTitle, SocialList, SocialListItem } from '@/components/footer/footer-bar/social-media/styles';
 
 type Props = {
     socialLinks: SocialLink[]
@@ -7,18 +8,18 @@ type Props = {
 
 function SocialMedia({ socialLinks }: Props) {
   return (
-    <div>
-      <p>Connect With Us On Social Media</p>
-      <ul>
+    <SocialMediaContainer>
+      <SocialMediaTitle className={cormorant.className}>Connect With Us On Social Media</SocialMediaTitle>
+      <SocialList>
         {socialLinks.map((social) => (
-          <li key={social.alt}>
+          <SocialListItem key={social.alt}>
             <a target="_blank" href={social.uri} rel="noreferrer">
               <Image src={social.icon} alt={social.alt} />
             </a>
-          </li>
+          </SocialListItem>
         ))}
-      </ul>
-    </div>
+      </SocialList>
+    </SocialMediaContainer>
   );
 }
 

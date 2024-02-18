@@ -1,5 +1,7 @@
 import { FormEvent } from 'react';
 import Button from '@/components/button';
+import { SubscribeInput, SubscribeInputWrapper, SubscribeTitle } from '@/components/footer/footer-bar/contact-email/styles';
+import { cormorant } from '@/constants';
 
 function ContactEmail() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -9,9 +11,11 @@ function ContactEmail() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <p>Subscribe to our Newsletter</p>
-      <input type="email" name="Email" id="contact-email" />
-      <Button type="submit" text="Submit" />
+      <SubscribeTitle className={cormorant.className}>Subscribe to our Newsletter</SubscribeTitle>
+      <SubscribeInputWrapper>
+        <SubscribeInput type="email" name="Email" id="contact-email" placeholder='Email'/>
+        <Button type="submit" text="Submit" />
+      </SubscribeInputWrapper>
     </form>
   );
 }

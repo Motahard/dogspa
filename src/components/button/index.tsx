@@ -1,3 +1,6 @@
+import { ButtonComponent } from "@/components/button/styles";
+import { cormorant } from "@/constants";
+
 type Props = {
     type?: 'submit' | 'reset' | 'button' | undefined;
     text?: string;
@@ -5,7 +8,7 @@ type Props = {
 
 function Button({ type, text }: Props) {
   return (
-    <button type={type}>{text}</button>
+    <ButtonComponent type={type} className={cormorant.className}>{text}</ButtonComponent>
   );
 }
 

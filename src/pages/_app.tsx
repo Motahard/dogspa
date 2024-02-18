@@ -1,6 +1,15 @@
 import type { AppProps } from 'next/app';
-import RootLayout from '@/layouts/layout';
+import dynamic from 'next/dynamic';
+import '@/styles/global.css';
+
+const DynamicRootLayout = dynamic(() => import('@/layouts/layout').then((mod) => mod.default), {
+  ssr: false,
+});
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  return <RootLayout><Component {...pageProps} /></RootLayout>;
+  return (
+    <DynamicRootLayout>
+      <Component {...pageProps} />
+    </DynamicRootLayout>
+  );
 }

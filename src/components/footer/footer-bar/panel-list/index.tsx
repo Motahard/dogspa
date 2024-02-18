@@ -1,20 +1,24 @@
-import { FooterItem } from '@/constants';
+import { FooterItem, cormorant, cormorantLight } from '@/constants';
+import {
+  PanelListWrapper, PanelListTitle, PanelListComponent, PanelListItem,
+} from './styles';
 
 type Props = {
     title: string;
     items: FooterItem[];
+    alignItems?: string;
 };
 
-function PanelList({ title, items }: Props) {
+function PanelList({ title, items, alignItems = 'flex-start' }: Props) {
   return (
-    <div>
-      <h2>{title}</h2>
-      <ul>
+    <PanelListWrapper alignItems={alignItems}>
+      <PanelListTitle className={cormorant.className}>{title}</PanelListTitle>
+      <PanelListComponent>
         {items.map((item) => (
-          <li key={item.id}>{item.text}</li>
+          <PanelListItem key={item.id} className={cormorantLight.className}>{item.text}</PanelListItem>
         ))}
-      </ul>
-    </div>
+      </PanelListComponent>
+    </PanelListWrapper>
   );
 }
 
