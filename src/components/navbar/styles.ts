@@ -5,6 +5,15 @@ type NavItemProps = {
     active: boolean;
 }
 
+export const Container = styled.div``;
+
+export const DiscountWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    background-color: ${colors.inHouse};
+    padding: 8px 0;
+`;
+
 export const NavigationWrapper = styled.nav`
     display: flex;
     padding: 8px;

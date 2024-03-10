@@ -13,7 +13,6 @@ export const Container = styled.div`
 `;
 
 export const FooterWrapper = styled.footer`
-    min-height: 500px;
     display: flex;
     flex-direction: column;
 `;
